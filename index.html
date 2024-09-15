@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма реєстрації</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Висота сторінки на 100% */
+            margin: 0; /* Видалити відступи */
+            background-color: #FFB6C1; /* Легкий фон */
+        }
+        .registration-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для форми */
+            width: 100%;
+            max-width: 400px;
+        }
+        input, select, button {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #FF69B4;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #FF1493;
+        }
+    </style>
+</head>
+<body>
+    <form class="registration-form" action="https://webhook.site">
+        <h1>Форма реєстрації</h1>
+
+        <label for="inputName">Ім'я користувача:<sup style="color: red;">*</sup></label>
+        <input type="text" name="inputName" id="inputName" required>
+
+        <label for="inputSurname">Прізвище користувача:</label>
+        <input type="text" name="inputSurname" id="inputSurname">
+
+        <label for="inputEmail">Електронна пошта:<sup style="color: red;">*</sup></label>
+        <input type="email" name="inputEmail" id="inputEmail" required>
+
+        <label for="inputPwd">Ваш пароль:<sup style="color: red;">*</sup></label>
+        <input type="password" name="pwd" id="inputPwd" required>
+
+        <label for="inputRPwd">Повторіть пароль:<sup style="color: red;">*</sup></label>
+        <input type="password" name="rpwd" id="inputRPwd" required>
+
+        <label for="genderSelect">Виберіть стать:</label>
+        <select name="gender" id="genderSelect">
+            <option value="undefined">undefined</option>
+            <option value="male">Чоловіча</option>
+            <option value="female">Жіноча</option>
+        </select>
+
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
